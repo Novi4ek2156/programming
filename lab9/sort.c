@@ -14,3 +14,7 @@ void bubble_sort(int size, int arr[size]) {
     }
 }
 //buble
+int main() {
+int a[]= {4,2, };
+bubble_sort(3, a[3]);
+}
