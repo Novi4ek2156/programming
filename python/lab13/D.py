@@ -100,12 +100,6 @@ def main_game():
                                            "|    |  \n"
                                            "|    0  \n"
                                            "|   /|\\\n"
-                                           "|    /\n")
-        if popitki == 0:
-            label_viselitsa.configure(text="----\n"
-                                           "|    |  \n"
-                                           "|    0  \n"
-                                           "|   /|\\\n"
                                            "|    /\\\n"
                                            "|_______")
 
