@@ -26,7 +26,6 @@ def choice_janre():
     elif b == "Научная литература":
         listbox.insert(0,sience)
 
-
 selected_words = tk.StringVar(value="Выберите жанр:")
 option_menu = tk.OptionMenu(root, selected_words, *janr)
 option_menu.config(width=20, font="Arial 12")

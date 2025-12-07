@@ -17,7 +17,7 @@ def new_game():
     result = ''
     slovo = ''
     popitki = 6  
-    
+    label_viselitsa.configure(text=" ")
     if b == "Фрукты":
         messagebox.showinfo("Начало игры", "Вы начали новую игру")
         slovo = len(fruits[index]) * "-"
@@ -78,20 +78,48 @@ def main_game():
         label_kolvo_popitok.configure(text=f"Осталось попыток: {popitki}")
         if popitki == 0:
             messagebox.showinfo("Конец игры", f"Вы проиграли! Загаданное слово: {word}")
-            new_game()
+            label_viselitsa.configure(text="")
             return
-    
+    if popitki < 6:
+        if popitki == 5:
+            label_viselitsa.configure(text="----")
+        if popitki == 4:
+            label_viselitsa.configure(text="----\n"
+                                           "|    |  \n")
+        if popitki == 3:
+            label_viselitsa.configure(text="----\n"
+                                           "|    |  \n"
+                                           "|    0  \n")
+        if popitki == 2:
+            label_viselitsa.configure(text="----\n"
+                                           "|    |  \n"
+                                           "|    0  \n"
+                                           "|   /|\\\n")
+        if popitki == 1:
+            label_viselitsa.configure(text="----\n"
+                                           "|    |  \n"
+                                           "|    0  \n"
+                                           "|   /|\\\n"
+                                           "|    /\n")
+        if popitki == 0:
+            label_viselitsa.configure(text="----\n"
+                                           "|    |  \n"
+                                           "|    0  \n"
+                                           "|   /|\\\n"
+                                           "|    /\\\n"
+                                           "|_______")
 
     if "-" not in slovo:
+        label_viselitsa.configure(text=" ")
         messagebox.showinfo("Победа!", f"Вы угадали слово: {word}")
         return
     
     entry.delete(0, tk.END)
-
+    
 
 root = tk.Tk()
 root.title("Виселица")
-root.geometry("600x290")
+root.geometry("800x500")
 
 label_tem = tk.Label(root, text="Выберите тему:", font="Arial 18")
 label_tem.pack()
@@ -111,7 +139,7 @@ label_result.pack()
 label_kolvo_popitok = tk.Label(root, text="Осталось попыток: 6", font="Arial 14")
 label_kolvo_popitok.pack()
 
-label_viselitsa = tk.Label(root, text="---")
+label_viselitsa = tk.Label(root, text="")
 label_viselitsa.pack()
 
 label_entry = tk.Label(root, text="Введите букву:", font="Arial 18")
