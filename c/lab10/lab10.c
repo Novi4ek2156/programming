@@ -2,13 +2,12 @@
 y=ax+b и структуру Точка с элементами x, y – координаты точки. Дана одна
 прямая и M точек, определить количество точек, лежащих на заданной
 прямой.*/
-#include "line.c"
 #include "lab10.h"
 
 int main() {
-    struct line f= {2,5};
-    struct dot d[] = {1,2};
-    d->y = d->x*f.a + f.b;
-    printf("%d\n", d->y);
-    
+    dot f[] = {{1, 3}, {2, 6}, {3,3}};
+    struct line l;
+    printf("Введите значения a и b:");
+    scanf("%d %d", &l.a, &l.b);
+    fx(l.a, l.b, f, 3);
 }
