@@ -45,6 +45,7 @@ def create_account(): #ф-я создания аккаунта
             if name not in users:
                 with open(Accounts, 'a') as file:
                     file.write(f"{name}:{password1}\n")
+                    file.write("\n")
                     messagebox.showinfo("Аккаунт","Аккаунт успешно создан!")
             elif name in users:
                 messagebox.showerror("Ошибка","Аккаунт с таким именем уже есть")
