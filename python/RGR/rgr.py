@@ -205,7 +205,7 @@ root_listbox = tk.Listbox(root, width=60)
 dobavka_knig()
 root_listbox.bind("<Double-Button-1>", add_to_korzina)
 root_listbox.grid(row=2,column=1, pady=10)
-root_for_korz_button = tk.Button(root, text="Add to korz", command=add_to_korzina)
+root_for_korz_button = tk.Button(root, text="Добавить\nв корзину", command=add_to_korzina)
 root_for_korz_button.grid(row=3, column=0)
 root.mainloop()
     
