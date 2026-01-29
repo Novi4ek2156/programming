@@ -1,6 +1,8 @@
 import pygame
 import random
 
+from pygame.constants import K_SPACE
+
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
@@ -22,6 +24,19 @@ hp = 3
 score = 0
 list_fruit = [apple, banana, orange, gift]
 running = True
+menu = True
+while menu:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            quit()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                menu = False
+    start_text = font.render('Press space for start', True, (0,225,0))
+    screen.fill((135, 206, 235))
+    screen.blit(start_text, (400,300))
+    pygame.display.flip()
 while running:
     time +=1
     for event in pygame.event.get():
