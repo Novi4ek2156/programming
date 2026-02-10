@@ -1,0 +1,12 @@
+#include "main.h"
+
+
+
+
+int main() {
+    struct kros mnogo_kros[N];
+    FillStruct(mnogo_kros);
+    PrintStruct(mnogo_kros);
+    Sort(mnogo_kros);
+    PrintStruct(mnogo_kros);
+}
