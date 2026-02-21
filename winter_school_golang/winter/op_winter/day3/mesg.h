@@ -1,0 +1,6 @@
+#define MAXBUFF 80
+#define PERM 0666
+typedef struct our_msgbuf{
+	long mtype;
+	char buff[MAXBUFF];
+} Message;

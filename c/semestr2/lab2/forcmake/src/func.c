@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../src/main.h"
 
 char *names_for_kros[5] = {"Abibas", "Puma  ", "Crocs ", "Nike  ", "ZZZ   "};
 char *models_for_kros[5] = {"Super ", "Ultra ", "Nano  ","Piko  ", "Z420  "};
