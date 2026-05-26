@@ -1,0 +1,3 @@
+/home/vlad/programming/programming/c/semestr2/C-Programming-cpp_task/CMakeFiles/paint.dir
+/home/vlad/programming/programming/c/semestr2/C-Programming-cpp_task/CMakeFiles/edit_cache.dir
+/home/vlad/programming/programming/c/semestr2/C-Programming-cpp_task/CMakeFiles/rebuild_cache.dir

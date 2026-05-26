@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 
-Accounts = "/home/vlad/programming/python/RGR/users_accounts"
-Books = "/home/vlad/programming/python/RGR/books_list"
+Accounts = "/home/vlad/programming/programming/python/RGR/users_accounts"
+Books = "/home/vlad/programming/programming/python/RGR/books_list"
 korz_list = []
 def window_register(): #окно регистрации
     global win_register, win_password_entry1, win_password_entry2, win_login_entry

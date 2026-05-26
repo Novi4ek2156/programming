@@ -3,28 +3,23 @@ import pandas as pd
 import numpy as np
 
 sizes = [100, 200, 400, 600, 800, 1000]
-threads_list = [2, 4, 8, 16]
+threads_list = [1,2, 4, 8, 16]
 colors = plt.cm.viridis(np.linspace(0, 1, len(threads_list)))
 
+threads_time_1 = [7, 28, 137, 450, 1300, 2350]
+threads_time_2  = [4, 21, 82, 240, 571, 1341]
+threads_time_4  = [2, 11, 50, 151, 358, 793]
+threads_time_8  = [1, 8, 40, 124, 317, 642]
+threads_time_16 = [2, 12, 36, 123, 282, 548]
 
-threads_time_2  = [4, 24, 82, 240, 653, 1318]
-threads_time_4  = [2, 17, 54, 818, 1808, 1434]
-threads_time_8  = [1, 8, 40, 130, 1004, 2236]
-threads_time_16 = [1, 6, 36, 109, 282, 3109]
-
-
-theoretical = [n**3 / 1_000_000 for n in sizes]
 
 plt.figure(figsize=(14, 7))
 
-
-plt.plot(sizes, threads_time_2,  'o-', label='2 потока',  color=colors[0], linewidth=2, markersize=8)
-plt.plot(sizes, threads_time_4,  's-', label='4 потока',  color=colors[1], linewidth=2, markersize=8)
-plt.plot(sizes, threads_time_8,  '^-', label='8 потоков',  color=colors[2], linewidth=2, markersize=8)
-plt.plot(sizes, threads_time_16, 'd-', label='16 потоков', color=colors[3], linewidth=2, markersize=8)
-
-
-plt.plot(sizes, theoretical, 'k--', label='O(N³) (теоретическая)', alpha=0.7, linewidth=2)
+plt.plot(sizes, threads_time_1, "o-", label="1 поток", color=colors[0], linewidth=2, markersize=8)
+plt.plot(sizes, threads_time_2,  'o-', label='2 потока',  color=colors[1], linewidth=2, markersize=8)
+plt.plot(sizes, threads_time_4,  's-', label='4 потока',  color=colors[2], linewidth=2, markersize=8)
+plt.plot(sizes, threads_time_8,  '^-', label='8 потоков',  color=colors[3], linewidth=2, markersize=8)
+plt.plot(sizes, threads_time_16, 'd-', label='16 потоков', color=colors[4], linewidth=2, markersize=8)
 
 
 plt.xlabel('Размер матрицы (N)', fontsize=12)
