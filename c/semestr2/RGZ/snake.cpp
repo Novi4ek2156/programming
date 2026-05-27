@@ -303,8 +303,7 @@ int main() {
     MapSize();
     Setup();
 
-    nodelay(stdscr, TRUE);  // ДОБАВЛЕНО: для неблокирующего ввода
-    // ДОБАВЛЕНО: задаем начальное направление, чтобы змейка двигалась сама
+    nodelay(stdscr, TRUE);
     dir = RIGHT;
     
     while(!gameOver) {
