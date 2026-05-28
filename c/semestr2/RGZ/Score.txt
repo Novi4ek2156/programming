@@ -1,3 +1,21 @@
+Game Over! Final Score: 590
+Tail length: 29
+Date: Thu May 28 09:01:32 2026
+Game Over! Final Score: 0
+Tail length: 0
+Date: Thu May 28 09:10:38 2026
 Game Over! Final Score: 50
 Tail length: 5
-Date: Wed May 27 20:06:02 2026
+Date: Thu May 28 09:15:29 2026
+VICTORY! Final Score: 0
+Tail length: 0
+Date: Thu May 28 09:20:06 2026
+VICTORY! Final Score: 0
+Tail length: 0
+Date: Thu May 28 09:20:34 2026
+VICTORY! Final Score: 0
+Tail length: 0
+Date: Thu May 28 09:20:43 2026
+VICTORY! Final Score: 0
+Tail length: 0
+Date: Thu May 28 09:20:52 2026

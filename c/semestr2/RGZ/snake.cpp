@@ -18,7 +18,7 @@ eDirection dir;
 int tailX[100], tailY[100], nTail;
 
 void SaveScoreToFile() {
-    FILE *f = fopen("Score.txt", "w+");
+    FILE *f = fopen("Score.txt", "a");
     if (f != NULL) {
         if (gameWin) {
             printw("YOU WIN!!!\n");
