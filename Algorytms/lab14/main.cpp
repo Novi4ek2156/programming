@@ -26,9 +26,10 @@ void direct_search(wstring text, wstring x) {
 
 size_t hash_func(wstring word) {
     size_t hash = 0;
-    size_t basis = 7;
+    size_t q = 7;
+    size_t basis = 256;
     for(wchar_t c : word) {
-        hash = hash * basis + c;
+        hash = (hash * basis) / q;
     }
     return hash;
 }
