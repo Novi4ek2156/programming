@@ -58,6 +58,16 @@ int Sum(Vertex* root) {
     }
 }
 
+
+int SumLen(Vertex* root, int l) {
+    if (root == nullptr) {
+        return 0;
+    }
+    else {
+        return l + SumLen(root->left, l+1) + SumLen(root->right, l+1);
+    }
+}
+
 int main() {
     Vertex* root;
     root = new Vertex;
@@ -78,7 +88,10 @@ int main() {
     root->right->right = new Vertex;
     root->right->right->data = 6;
     root->right->right->left = nullptr;
-    root->right->right->right = nullptr;
+    root->right->right->right = new Vertex;
+    root->right->right->right->data = 7;
+    root->right->right->right->left = nullptr;
+    root->right->right->right->right = nullptr;
     cout << "Обход сверху вниз: ";
     Obhod_sverhu_vniz(root);
     cout << endl;
@@ -90,7 +103,8 @@ int main() {
     int size = Size(root);
     int h = Height(root);
     int sum = Sum(root);
-    float h_sr = (float)sum / (float)size; 
+    int sumlen = SumLen(root, 1);
+    float h_sr = (float)sumlen / (float)size; 
     cout << endl << "Высота дерева: " << h << endl << "Контрольная сумма: " << sum << endl << "Размер: " << size << endl;
     printf("Средняя высота: %0.2f", h_sr);
 }
